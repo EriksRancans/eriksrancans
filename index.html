@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Eriks Rancans</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- jQuery Modal -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="grid.css" />
+    <link rel="stylesheet" href="modals.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <nav>
+        <span class="burger" onclick="openNav()">
+            <div id="fab"><i id="burger" class="material-icons burger-icon" onclick="openNav()">menu</i></div>
+        </span>
+        <div id="sidenav" class="sidenav" onclick="closeNav()">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="material-icons">close</i></a>
+            <div id="app" class=nav-style>
+                <a class="nav" href="#home" v-smooth-scroll="{ duration: 10000, offset: -50 }">HOME</a>
+                <a class="nav" href="#skills" v-smooth-scroll="{ duration: 10000, offset: -50 }">MY SKILLS</a>
+                <a class="nav" href="#projects" v-smooth-scroll="{ duration: 10000, offset: -50 }">PROJECTS</a>
+                <a class="nav" href="#contact" v-smooth-scroll="{ duration: 10000, offset: -50 }">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <section id="home">
+            <div class="home-img">
+                <img src="images/index_picture.png">
+            </div>
+            <div class="home-text">
+                <h1>Eriks Rancans</h1>
+                <h2>
+                    Front-end developer, currently studying in UCN, Aalborg, Denmark.
+                    <br> I enjoy working with <strong>videos</strong> and post production.
+                    <br>I also create <strong>user interfaces</strong> that are based on research and needs of the client,
+                    you can see my skills and projects below
+                </h2>
+            </div>
+            <div id="scroll">
+                <div id="scroll-btn">
+                    <a href="#skills" v-smooth-scroll="{ duration: 10000, offset: -50 }"><span></span></a>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+        <div class="page-title">
+            <h2>MY SKILLS</h2>
+        </div>
+        <div data-aos="fade-left">
+            <div class="skill-row">
+                <div class="skill-img img-left">
+                    <img src="images/front-end.jpg">
+                </div>
+                <div class="skill-text text-right">
+                    <h1>Front-end</h1>
+                    <p>
+                        I work with <strong>HTML5</strong> and <strong>CSS</strong>, additionally to that I am also
+                        learning new skills, like <strong>JS</strong>. I use these tools to create <strong>fully
+                            responsive</strong> web-solutions and I am looking deeper into SEO.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div data-aos="fade-right">
+            <div class="skill-row">
+                <div class="skill-text text-left">
+                    <h1>UI/UX</h1>
+                    <p>
+                        I work with <strong>Information architecture</strong> as well as <strong>wireframing</strong>
+                        and <strong>prototyping</strong>, I enjoy creating <strong>user Interfaces</strong> and
+                        conducting <strong>usabilty tests</strong>, all of that is based on the <strong>user research</strong>
+                    </p>
+                </div>
+                <div class="skill-img img-right">
+                    <img src="images/ui.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div data-aos="fade-left">
+            <div class="skill-row">
+                <div class="skill-img img-left">
+                    <img src="images/software.jpg">
+                </div>
+                <div class="skill-text text-right">
+                    <h1>Software</h1>
+                    <p>
+                        I use different kinds of software for different purposes, for design and mockups I use <strong>CorelDraw,
+                            Illustrator Adobe xD</strong>, for photo, video and pictures I use <strong>Photoshop, After
+                            effects</strong> and <strong>Premiere pro</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SKILLS SECTION ENDS-->
+
+
+    <section id="projects">
+
+        <!-- Modals -->
+        <div id="project-1" class="modal">
+            <div class="modal-grid">
+                <div class="top">
+                    <div class="project-description">
+                        <img src="images/apel.svg">
+                        <p>
+                            Goldsmith Apel was founded in 1946. And it is proud that we can call us Denmark's largest
+                            supplier of handmade wedding rings. In our own workshop we create custom-made engagement
+                            and wedding rings, and unique jewels of their own design.
+                        </p>
+
+                        <div class="project-icons">
+                            <div class="project-row">
+                                <i class="material-icons">timer</i>
+                                <div class="title">
+                                    <p>Time</p>
+                                    <h3>Three weeks</h3>
+                                </div>
+                            </div>
+                            <div class="project-row">
+                                <i class="material-icons">perm_identity</i>
+                                <div class="title">
+                                    <p>Role</p>
+                                    <h3>Front-end development</h3>
+                                </div>
+                            </div>
+                            <div class="project-row">
+
+                                <i class="material-icons">trending_up</i>
+                                <div class="title">
+                                    <p>Goal</p>
+                                    <h3>Structured IA</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 row-2">
+                    <h2>Problem</h2>
+                    <p>
+                        The group discussed
+                        and overlooked different options for layouts that would be suitable for the current project
+                        as it was necessary to fix IA issues and create certain look to represent the client in a
+                        modern, but
+                        sophisticated way that would suggest that it is a high end jewelry store.
+                    </p>
+                </div>
+                <div class="col-3 row-3">
+                    <img src="images/apel1.jpg">
+                </div>
+                <div class="col-2 row-2">
+                    <img src="images/apel2.jpg">
+                </div>
+                <div class="col-3 row-3">
+                    <h2>Solution</h2>
+                    <p>
+                        We solved the formerly stated problems by completely redesigning the Goldsmith Apel's website
+                        into a simple, easy to navigate-through website, following the current design patterns
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="project-2" class="modal">
+            <div class="modal-grid">
+                <div class="top">
+                    <div class="project-description">
+                        <img src="images/karneval.png">
+                        <p>
+                            Aalborg Carnival is the name for the annual cultural event carnival in the city of Aalborg
+                            – the fourth largest city in Denmark. The carnival takes place the last week in May and is
+                            the largest carnival in Scandinavia.
+                        </p>
+
+                        <div class="project-icons">
+                            <div class="project-row">
+                                <i class="material-icons">timer</i>
+                                <div class="title">
+                                    <p>Time</p>
+                                    <h3>Three weeks</h3>
+                                </div>
+                            </div>
+                            <div class="project-row">
+                                <i class="material-icons">perm_identity</i>
+                                <div class="title">
+                                    <p>Role</p>
+                                    <h3>Front-end development</h3>
+                                </div>
+                            </div>
+                            <div class="project-row">
+
+                                <i class="material-icons">trending_up</i>
+                                <div class="title">
+                                    <p>Goal</p>
+                                    <h3>Easy accessibility</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 row-2">
+                    <h2>Problem</h2>
+                    <p>
+                        The group had to create a solution that would be easy to use while participating in carneval 
+                        because it is the largest carneval in Scandinavia we had to create something that provides 
+                        user with information in short amount of time and it is easily acessible.
+                    </p>
+                </div>
+                <div class="col-3 row-3">
+                    <img src="images/carneval1.jpg">
+                </div>
+                <div class="col-2 row-2">
+                    <img src="images/carneval2.jpg">
+                </div>
+                <div class="col-3 row-3">
+                    <h2>Solution</h2>
+                    <p>
+                        We created a web-app that provides user with all the necessary information about carneval, 
+                        as well as list of events and other interest points, such as restrooms, nearby reastaurants
+                        and even option to find a transportation and bus stops.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="project-3" class="modal">
+            <div class="modal-grid">
+                <div class="top">
+                    <div class="project-description">
+                        <img src="images/musashino-logo.png">
+                        <p>
+                            Musashino association in Brasov, Romania is an association for people who are 
+                            interested in Japanese language and culture. Association provides an option for
+                             people to learn Japanese language, as well as manga courses and caligraphy courses.
+                        </p>
+
+                        <div class="project-icons">
+                            <div class="project-row">
+                                <i class="material-icons">timer</i>
+                                <div class="title">
+                                    <p>Time</p>
+                                    <h3>Four weeks</h3>
+                                </div>
+                            </div>
+                            <div class="project-row">
+                                <i class="material-icons">perm_identity</i>
+                                <div class="title">
+                                    <p>Role</p>
+                                    <h3>Front-end development</h3>
+                                </div>
+                            </div>
+                            <div class="project-row">
+
+                                <i class="material-icons">trending_up</i>
+                                <div class="title">
+                                    <p>Goal</p>
+                                    <h3>Intuitive IA</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 row-2">
+                    <h2>Problem</h2>
+                    <p>
+                        When starting the work on the project we came to conclusion that all the relevant information
+                        was spread around several different pages and that can turn out to be problematic, because user 
+                        would leave the website without finding the relevant information. That could also impact the 
+                        amount of users that actually sign up for the courses.
+                    </p>
+                </div>
+                <div class="col-3 row-3">
+                    <img src="images/musashino1.jpg">
+                </div>
+                <div class="col-2 row-2">
+                    <img src="images/musashino2.jpg">
+                </div>
+                <div class="col-3 row-3">
+                    <h2>Solution</h2>
+                    <p>
+                        We created an intuitive IA that provides user with all the relevant information for them, such as
+                        schedules, benefits, registration fees and information about courses. Since previously the information was 
+                        poorly acessible we provided our solution that would take only one click to find any information needed.
+                </div>
+            </div>
+        </div>
+        <!-- Modals end -->
+
+        <div class="page-title">
+            <h2>PROJECTS</h2>
+
+        </div>
+
+        <!-- Grid starts -->
+        <div class="grid-container">
+
+            <div class="col-1" data-aos="fade-right" data-aos-duration="400">
+                <div class="project-content">
+                    <h1>Apel Jewelery</h1>
+                    <div class="project-img">
+                        <img src="images/apel.png">
+                    </div>
+                    <div class="description">
+                        <p>Denmark's largest supplier of handmade wedding rings</p>
+                    </div>
+                    <div class="project-btn">
+                        <a href="#project-1" rel="modal:open">
+                            <h4>Show project</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-2" data-aos="fade-up" data-aos-duration="500">
+                <div class="project-content">
+                    <h1>Aalborg carneval</h1>
+                    <div class="project-img">
+                        <img src="images/carneval.png">
+                    </div>
+                    <div class="description">
+                        <p>Annual cultural event in Aalborg, largest carneval in Scandinavia</p>
+                    </div>
+                    <div class="project-btn">
+                        <a href="#project-2" rel="modal:open">
+                            <h4>Show project</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3" data-aos="fade-left" data-aos-duration="500">
+                <div class="project-content">
+                    <h1>Musashino association</h1>
+                    <div class="project-img">
+                        <img src="images/musashino.png">
+                    </div>
+                    <div class="description">
+                        <p>Romanian asociation for learning more about Japanese language and culture</p>
+                    </div>
+                    <div class="project-btn">
+                        <a href="#project-3" rel="modal:open">
+                            <h4>Show project</h4>
+                        </a>
+                    </div>
+                </div>
+                <!-- Grid ends -->
+    </section>
+    <section id="contact">
+        <section class="contact-content"data-aos="fade-up" data-aos-duration="500">
+            <div class="home-text">
+                <h1>End of the road</h1>
+                <h2>Send me a message if you would like to contact me, <br>or you can check out other stuff</h2>
+            </div>
+            <div class="form-container">
+                <form method="POST" action="https://formspree.io/eeriksrancaans@gmail.com" style="width: auto; overflow: hidden;">
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" name="email" placeholder="Your email">
+                    <textarea name="message" placeholder="Your message"></textarea>
+                    <button type="submit">Send message</button>
+                </form>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <p>&copy; Eriks Rancans 2018</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="https://unpkg.com/vue-smooth-scroll@1.0.11"></script>
+    <script src="js.js"></script>
+
+</body>
+</html>
